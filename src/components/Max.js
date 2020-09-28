@@ -1,15 +1,14 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-
-class Total extends Component{
+class Max extends Component{
   render(){
 
-    const {counters} = this.props;
+    const {counters } = this.props;
 
-    return (
+    return(
       <div>
-        <h1>Total: {counters.reduce((acc, value) => acc + value)}</h1>
+        <h1>Max: {Math.max(...counters)}</h1>
       </div>
     )
   }
@@ -21,4 +20,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps)(Total);
+export default connect(mapStateToProps)(Max)

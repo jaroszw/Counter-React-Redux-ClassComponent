@@ -1,6 +1,7 @@
 import React from 'react';
 import Counters from '../counter'
 import Total from '../Total'
+import Max from '../Max'
 import './App.css';
 
 import {Provider } from 'react-redux';
@@ -17,6 +18,7 @@ function App(){
         <h1>COUNT </h1>
         <Counters />
         <Total />
+        <Max />
       </div>
     </Provider>
   )
