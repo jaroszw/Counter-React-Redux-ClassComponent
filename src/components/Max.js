@@ -4,11 +4,11 @@ import {connect} from 'react-redux';
 class Max extends Component{
   render(){
 
-    const {counters } = this.props;
+    const values = this.props.counters.map((counter)=> counter.value);
 
     return(
       <div>
-        <h1>Max: {Math.max(...counters)}</h1>
+        <h1>Max: {Math.max(...values)}</h1>
       </div>
     )
   }

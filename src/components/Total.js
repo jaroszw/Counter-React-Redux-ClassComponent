@@ -5,11 +5,11 @@ import {connect} from 'react-redux';
 class Total extends Component{
   render(){
 
-    const {counters} = this.props;
+    const total = this.props.counters.reduce((acc, counter) => acc + counter.value, 0);
 
     return (
       <div>
-        <h1>Total: {counters.reduce((acc, value) => acc + value)}</h1>
+        <h1>Total: {total}</h1>
       </div>
     )
   }
